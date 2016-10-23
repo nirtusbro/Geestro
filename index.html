@@ -1,0 +1,38 @@
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+    	<title>Kidanjeee</title>
+    	<script src="phaser.min.js"></script>
+	   <script src="Boot.js"></script>
+        <script src="Preloader.js"></script>
+	   <script src="MainMenu.js"></script>
+	   <script src="Game.js"></script>
+    	
+		
+    </head>
+	
+	
+	<body  bgcolor="#3450">
+	
+	
+	<div  id="GameContainer" ></div>
+               
+        <script type="text/javascript" >
+        
+            window.onload = function()
+            {
+            var game = new Phaser.Game(1100,610, Phaser.CANVAS, 'GameContainer');
+                
+                game.state.add('Boot', theGame.Boot);
+                game.state.add('Preloader', theGame.Preloader);
+              //  game.state.add('MainMenu', theGame.MainMenu);
+                game.state.add('Game', theGame.Game);
+
+                game.state.start('Boot');
+            };
+        </script>
+
+	
+	
+	</body>
+    </html>
