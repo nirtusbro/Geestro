@@ -1,0 +1,13 @@
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+body{
+    overflow:hidden;
+    margin:0;
+}
+canvas{
+    top:0;
+    left:0;
+}
