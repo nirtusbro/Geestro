@@ -25,7 +25,7 @@ theGame.Preloader.prototype = {
 	    this.load.image('bullet', 'img/metak5.png');
 	    this.load.image('bckg', 'img/pozadina.png');
 	    this.load.image('healthbar', 'img/healthBar.png');
-
+		this.load.audio('bulletsound', 'sound/bambam.mp3');
 	},
 
 	create: function () {

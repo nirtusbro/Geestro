@@ -7,8 +7,8 @@
         <script src="Preloader.js"></script>
 	   <script src="MainMenu.js"></script>
 	   <script src="Game.js"></script>
-    	
-		
+		<script src="jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 	
 	
@@ -21,8 +21,7 @@
         
             window.onload = function()
             {
-            var game = new Phaser.Game(1100,610, Phaser.CANVAS, 'GameContainer');
-                
+            var game = new Phaser.Game($(window).width(),$(window).height(), Phaser.CANVAS, 'GameContainer');
                 game.state.add('Boot', theGame.Boot);
                 game.state.add('Preloader', theGame.Preloader);
               //  game.state.add('MainMenu', theGame.MainMenu);
@@ -32,7 +31,7 @@
             };
         </script>
 
-	
-	
+
+
 	</body>
     </html>

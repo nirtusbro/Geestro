@@ -4,6 +4,7 @@ theGame.Game = function (game) {
     this.player;
     this.enemyT;
     this.enemies = [];
+    this.bulletsound;
     //this.bullet;
     this.enemyBullets;
     this.healthbar;
@@ -70,7 +71,7 @@ theGame.Game.prototype = {
         this.bitmap.context.fillStyle = 'rgb(255, 255, 255)';
         this.bitmap.context.strokeStyle = 'rgb(255, 255, 255)';
         this.add.image(0, 0, this.bitmap);
-
+        this.bulletsound= this.add.audio('bulletsound');
         this.land = this.add.tileSprite(0, 0, 2000, 2000,  'bckg');
         //land.scale.setTo(0.8);
         this.land.fixedToCamera = true;
@@ -156,6 +157,7 @@ theGame.Game.prototype = {
             var bullet = this.bullets.getFirstExists(false);
             bullet.reset(this.point.x, this.point.y);
 
+            this.bulletsound.play();
             bullet.rotation =  this.physics.arcade.angleToPointer(this.player);
             this.physics.arcade.velocityFromAngle(this.player.angle, 850, bullet.body.velocity);
         }
